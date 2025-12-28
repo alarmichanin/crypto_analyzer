@@ -1,28 +1,13 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![Unlicense][license-shield]][license-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -89,19 +74,7 @@ Simple app to track your crypto portrofilo, receive price change notifications a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-
-<!-- * [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url] -->
-
 
 * [![Flask][Flask.com]][Flask-url]
 * [![React][React.com]][React-url]
@@ -121,11 +94,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 * pip
   ```sh
   python -m pip install --upgrade pip
@@ -137,46 +105,18 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/alarmichanin/crypto_analyzer.git
    ```
-2. Install NPM packages
-   ```sh
-   cd client
-   npm install
-   ```
-3. Install NPM packages
+2. Install pip packages
    ```sh
    cd api
    python -m venv .venv
    source .venv\Scripts\activate
    pip install -r requirements.txt
    ```
-4. Create .env file (example)
-   ```env
-   API_PORT=5000
-   API_URL=
-   DB_PORT=3000
-   DB_URL=  
-   ```
-
-
+3. Fill .env file
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-### Development
-
-1. Run client
-   ```sh
-   npm run dev
-   ```
-2. Run server
-   ```sh
-   npm run api
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Deploy
+### Development and Deploy
 
 1. Build app image
    ```sh
@@ -218,12 +158,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the Unlicense. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 
 
