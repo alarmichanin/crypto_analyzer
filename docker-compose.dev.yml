@@ -1,0 +1,7 @@
+services:
+  api:
+    volumes:
+      - ./api:/app/api
+    environment:
+      FLASK_DEBUG: 1
+    command: flask run -h 0.0.0.0 --reload
