@@ -1,7 +1,10 @@
 services:
   api:
+    ports:
+      - "5000:5000"
     volumes:
       - ./api:/app/api
     environment:
-      FLASK_DEBUG: 1
-    command: flask run -h 0.0.0.0 --reload
+      FLASK_DEBUG: "1"
+      FLASK_APP: main_routes.py
+    command: flask run -h 0.0.0.0 --debug

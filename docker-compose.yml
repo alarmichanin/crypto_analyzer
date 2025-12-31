@@ -3,7 +3,11 @@ services:
     build: ./api
     ports:
       - "5000:5000"
-    command: flask run -h 0.0.0.0
+    environment:
+      FLASK_APP: main_routes.py
+    depends_on:
+      - db
+    restart: unless-stopped
 
   db:
     image: postgres
@@ -13,11 +17,13 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - db:/var/lib/postgresql/data
+    restart: unless-stopped
 
   adminer:
     image: adminer
     ports:
-      - 8080:8080
+      - "8080:8080"
+    restart: unless-stopped
 
 volumes:
   db:
