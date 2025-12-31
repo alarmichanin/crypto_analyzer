@@ -1,32 +1,32 @@
 services:
-  api: 
+  api:
     build: ./api
     ports:
       - "5000:5000"
     volumes:
-      - ./api:/app/api 
+      - ./api:/app/api
     environment:
-      FLASK_DEBUG: 1
+      FLASK_DEBUG: "1"
       FLASK_APP: main_routes.py
     command: flask run -h 0.0.0.0
     depends_on:
       - db
     restart: unless-stopped
-    
+
   db:
-    image: postgres  
+    image: postgres
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: postgres
     volumes:
-      - db:/var/lib/postgresql 
+      - db:/var/lib/postgresql/data
     restart: unless-stopped
 
   adminer:
     image: adminer
     ports:
-      - 8080:8080
+      - "8080:8080"
     restart: unless-stopped
 
 volumes:
