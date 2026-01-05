@@ -29,3 +29,6 @@
 #     })
 #     assert response.json["data"]["user"]["name"] == "Flask"
 
+# # START TESTS
+
+# python -m pytest tests 
