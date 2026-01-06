@@ -1,5 +1,5 @@
-import os
-import json
+import os  # noqa: F401
+import json  # noqa: F401
 from dotenv import load_dotenv
 from flask import Flask
 
