@@ -122,9 +122,12 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    docker-compose build
    ```
-2. Start docker container
+2. Start docker container(Dev)
    ```sh
-   docker-compose up
+   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+3. Start docker container (Prod)
+   ```sh
+   docker compose -f docker-compose.yml up --build
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

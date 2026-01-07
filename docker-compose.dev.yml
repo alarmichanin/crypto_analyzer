@@ -1,0 +1,8 @@
+services:
+  api:
+    volumes:
+      - ./api:/app/api
+    environment:
+      FLASK_DEBUG: "1"
+      FLASK_APP: run:app
+    command: flask --app run:app run -h 0.0.0.0 --debug

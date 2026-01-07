@@ -3,14 +3,9 @@ services:
     build: ./api
     ports:
       - "5000:5000"
-    volumes:
-      - ./api:/app/api
-    environment:
-      FLASK_DEBUG: "1"
-      FLASK_APP: run:app
-    command: flask --app run:app run -h 0.0.0.0 --debug
     depends_on:
       - db
+      - redis
     restart: unless-stopped
 
   db:
@@ -21,6 +16,10 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - db:/var/lib/postgresql
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
     restart: unless-stopped
 
   adminer:
