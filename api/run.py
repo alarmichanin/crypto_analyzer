@@ -1,5 +1,4 @@
 import os
-import json
 from dotenv import load_dotenv
 from flask import Flask
 from app.routes.health import health_check_bp
