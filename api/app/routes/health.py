@@ -1,8 +1,11 @@
 from flask import Blueprint
 
-health_check_bp = Blueprint('health_check', __name__,)
+health_check_bp = Blueprint(
+    "health_check",
+    __name__,
+)
 
 
-@health_check_bp.route('/health')
+@health_check_bp.route("/health")
 def health_check():
-    return 'ok', 200
+    return "ok", 200
