@@ -3,9 +3,21 @@ services:
     build: ./api
     ports:
       - "5000:5000"
+    environment:
+      DATABASE_URL: postgresql://user:password@db:5432/postgres
+      REDIS_URL: redis://redis:6379
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     restart: unless-stopped
 
   db:
@@ -16,6 +28,12 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     restart: unless-stopped
 
   redis:
