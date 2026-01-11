@@ -1,7 +1,10 @@
 import os
+<<<<<<< HEAD
 
 from app.db import db, migrate
 from app.routes.health import health_check_bp
+=======
+>>>>>>> bc20053a1818a08eee58cf27da113277832af0c0
 from dotenv import load_dotenv
 from flask import Flask
 
@@ -9,9 +12,15 @@ load_dotenv()
 
 app = Flask(__name__)
 
+<<<<<<< HEAD
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+=======
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+    "DATABASE_URL", "postgresql+psycopg2://postgres:postgres@db:5432/myappdb"
+)
+>>>>>>> bc20053a1818a08eee58cf27da113277832af0c0
 db.init_app(app)
 migrate.init_app(app, db)
 
