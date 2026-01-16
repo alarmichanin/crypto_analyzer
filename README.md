@@ -1,16 +1,13 @@
 <a id="readme-top"></a>
 
-
-
 <!-- PROJECT SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -34,8 +31,6 @@
     <a href="https://github.com/alarmichanin/crypto_analyzer/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -63,9 +58,8 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -76,17 +70,16 @@ Simple app to track your crypto portrofilo, receive price change notifications a
 
 ### Built With
 
-* [![Flask][Flask.com]][Flask-url]
-* [![React][React.com]][React-url]
-* [![Tailwind][Tailwind.com]][Tailwind-url]
-* [![PostgreSQL][PostgreSQL.com]][PostgreSQL-url]
-* [![Redis][Redis.com]][Redis-url]
+- [![Flask][Flask.com]][Flask-url]
+- [![React][React.com]][React-url]
+- [![Tailwind][Tailwind.com]][Tailwind-url]
+- [![PostgreSQL][PostgreSQL.com]][PostgreSQL-url]
+- [![Redis][Redis.com]][Redis-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -94,7 +87,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* pip
+- pip
   ```sh
   python -m pip install --upgrade pip
   ```
@@ -125,16 +118,21 @@ To get a local copy up and running follow these simple example steps.
 2. Start docker container(Dev)
    ```sh
    docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+   ```
 3. Start docker container (Prod)
    ```sh
    docker compose -f docker-compose.yml up --build
    ```
+4. Midgrate database tables
+   ```sh
+   docker-compose exec web flask db migrate
+   docker-compose exec web flask db upgrade
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -156,19 +154,17 @@ Don't forget to give the project a star! Thanks again!
   <img src="https://contrib.rocks/image?repo=alarmichanin/crypto_analyzer" alt="contrib.rocks image" />
 </a>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/alarmichanin/crypto_analyzer.svg?style=for-the-badge
 [contributors-url]: https://github.com/alarmichanin/crypto_analyzer/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/alarmichanin/crypto_analyzer.svg?style=for-the-badge
@@ -182,14 +178,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
+
 [Flask.com]: https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white
-[Flask-url]: https://flask.palletsprojects.com/en/stable/ 
+[Flask-url]: https://flask.palletsprojects.com/en/stable/
 [React.com]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
-[React-url]: https://react.dev/ 
+[React-url]: https://react.dev/
 [PostgreSQL.com]: https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white
-[PostgreSQL-url]: https://www.postgresql.org/ 
+[PostgreSQL-url]: https://www.postgresql.org/
 [Redis.com]: https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white
-[Redis-url]: https://redis.io/ 
+[Redis-url]: https://redis.io/
 [Tailwind.com]: https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC
-[Tailwind-url]: https://tailwindcss.com/ 
+[Tailwind-url]: https://tailwindcss.com/
