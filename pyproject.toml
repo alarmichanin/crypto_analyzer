@@ -7,18 +7,12 @@ exclude = [
   ".venv",
   "venv",
   "__pycache__",
-  "api/**/migrations/**",
+  "**/migrations/**",
 ]
 
 [tool.ruff.lint]
-select = [
-  "E", "F", "W", "I", "B", "UP", "SIM", "N",
-]
-ignore = [
-  "E501",
-  "W291",
-  "W293",
-]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "N"]
+ignore = ["E501", "W291", "W293"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -27,6 +21,6 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.pytest.ini_options]
-testpaths = ["api/tests"]
-pythonpath = ["api"]
+testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-q --maxfail=1 --disable-warnings"
