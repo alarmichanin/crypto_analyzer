@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }} 
+      FLASK_DEBUG: ${{ vars.FLASK_DEBUG }}
+
     defaults:
       run:
         working-directory: api
