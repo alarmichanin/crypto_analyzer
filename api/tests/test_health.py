@@ -1,9 +1,4 @@
-from run import app
-
-
-def test_health_check():
-    with app.test_client() as client:
-        responce = client.get('/health')
-
-        assert responce.status_code == 200
-        assert responce.data.decode('utf-8') == 'ok'
+def test_health_check(client):
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.get_data(as_text=True) == "ok"
